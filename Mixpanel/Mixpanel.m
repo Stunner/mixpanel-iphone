@@ -1096,7 +1096,7 @@ static void MixpanelReachabilityCallback(SCNetworkReachabilityRef target, SCNetw
                 }
                 
                 __strong id<MixpanelDelegate> strongDelegate = self.delegate;
-                if (strongDelegate != nil && [strongDelegate respondsToSelector:@selector(mixpanelOnActiveCheck:forNotifications:andSurveys:)]) {
+                if (strongDelegate != nil && [strongDelegate respondsToSelector:@selector(mixpanel:willShowNotificationOrSurveyFromArray:)]) {
                     showPresentationObject = [strongDelegate mixpanel:self willShowNotificationOrSurveyFromArray:presentationObjects];
                 }
             }
